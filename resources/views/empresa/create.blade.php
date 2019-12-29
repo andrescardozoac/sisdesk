@@ -138,6 +138,5 @@
             </div>
 
 </form>
-@include('plantilla.footer',['container'=>'container'])
-
+<!--@include('plantilla.footer',['container'=>'container'])-->
 @endsection

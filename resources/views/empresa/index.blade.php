@@ -4,6 +4,7 @@
 
 
 @section('contenido')
+<!--
 <div class="container-fluid registerinicio">
                 <div class="row">
                     <div class="col-md-6 register-left register-left1">
@@ -17,7 +18,7 @@
                     </div>    
                 </div>
 </div>
-
+-->
 
 
 <div class="container-fluid ">
@@ -111,6 +112,5 @@
 
 </div>
 
-    @include('plantilla.footer',['container'=>'container-fluid'])
+<!-- @include('plantilla.footer',['container'=>'container-fluid'])-->
     @endsection
-    
