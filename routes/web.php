@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('empresa','EmpresaController');
+
+Route::get('/cancelar',function(){
+
+    return redirect()->route('empresa.index')->with('cancelar','Acción Cancelada');
+
+})->name('cancelar');
+
+Route::get('/empresa/{id}/confirm','EmpresaController@confirm')->name('empresa.confirm');
