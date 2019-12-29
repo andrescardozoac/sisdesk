@@ -62,7 +62,7 @@
             }
         </style>
 
-     <!--   @extends('plantilla.plantilla') -->
+        @extends('plantilla.plantilla')
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -71,7 +71,7 @@
                     @auth
                         <a href="{{ url('/empresa') }}">INICIO</a>
                     @else
-                        <a href="{{ route('login') }}">INICAR SESION</a>
+                        <a href="{{ route('login') }}">INICIAR SESION</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">REGISTRARSE</a>
