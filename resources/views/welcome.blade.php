@@ -62,7 +62,7 @@
             }
         </style>
 
-        @extends('plantilla.plantilla')
+     <!--   @extends('plantilla.plantilla') -->
     </head>
     <body>
         <div class="flex-center position-ref full-height">
