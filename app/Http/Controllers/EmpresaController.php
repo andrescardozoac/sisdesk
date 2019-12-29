@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Empresa;
+
 
 class EmpresaController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,8 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        //
+        $Empresa = Empresa::paginate(5);
+        return view('empresa.index',compact('Empresa'));
     }
 
     /**
@@ -23,7 +32,7 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        //
+        return view('empresa.create');
     }
 
     /**
@@ -34,7 +43,18 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Empresa = new Empresa;
+        $Empresa->tipoid= $request->tipoIdentificacion;
+        $Empresa->identificacion = $request->identificacion;
+        $Empresa->nombre = $request->nombreEmpresa;
+        $Empresa->descripcion = $request->descripcion;
+        $Empresa->correo = $request->email;
+        $Empresa->telefono = $request->telefono;
+        $Empresa->tipoEmpresa =$request->tipoEmpresa;
+        $Empresa->save();
+       return redirect()->route('empresa.index')->with('datos','Empresa Registrada Correctamente');
+
+       // return dd($request);
     }
 
     /**
@@ -45,7 +65,8 @@ class EmpresaController extends Controller
      */
     public function show($id)
     {
-        //
+        $Empresa = Empresa::findOrFail($id);
+        return view('empresa.show',compact('Empresa'));
     }
 
     /**
@@ -56,7 +77,8 @@ class EmpresaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Empresa = Empresa::findOrFail($id);
+        return view('empresa.edit',compact('Empresa'));
     }
 
     /**
@@ -68,7 +90,17 @@ class EmpresaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Empresa = Empresa::findOrFail($id);
+        $Empresa->tipoid= $request->tipoIdentificacion;
+        $Empresa->identificacion = $request->identificacion;
+        $Empresa->nombre = $request->nombreEmpresa;
+        $Empresa->descripcion = $request->descripcion;
+        $Empresa->correo = $request->email;
+        $Empresa->telefono = $request->telefono;
+        $Empresa->tipoEmpresa =$request->tipoEmpresa;
+        $Empresa->save();
+       return redirect()->route('empresa.index')->with('datos','Empresa Actualizado Correctamente');
+        
     }
 
     /**
@@ -79,6 +111,15 @@ class EmpresaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Empresa = Empresa::findOrFail($id);
+        $Empresa->delete();
+        return redirect()->route('empresa.index')->with('datos','Empresa Eliminada Correctamente');
+        
+    }
+
+    public function confirm($id)
+    {
+        $Empresa = Empresa::findOrFail($id);
+        return view('empresa.confirm',compact('Empresa'));
     }
 }
