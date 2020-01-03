@@ -77,7 +77,12 @@
                                                 </tr>
                                               </thead>
                                               <tbody>
-                                              @foreach($Empresa as $Empresaitem)
+                                              <?php
+                                          
+                                             $user = App\User::findOrFail(Auth::user()->id);
+                                             $emp = $user->empresas;
+                                             ?>
+                                              @foreach($emp as $Empresaitem)
                                                 <tr>
                                                   <th scope="row">{{$Empresaitem->tipoid}}</th>
                                                   <td>{{$Empresaitem->identificacion}}</td>

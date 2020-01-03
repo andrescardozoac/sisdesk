@@ -24,6 +24,8 @@
 
 <form action="{{route('empresa.store')}}" method="post">
 @csrf
+ 
+    <input type="hidden" name="id_user" value="{{ Auth::user()->id }}"/>
 
 <div class="container register">
 

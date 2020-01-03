@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Empresa;
+use App\User;
 
 
 class EmpresaController extends Controller
@@ -52,6 +53,11 @@ class EmpresaController extends Controller
         $Empresa->telefono = $request->telefono;
         $Empresa->tipoEmpresa =$request->tipoEmpresa;
         $Empresa->save();
+
+       
+        $user = User::findOrFail($request->id_user);
+        $user->empresas()->attach($Empresa->id);
+
        return redirect()->route('empresa.index')->with('datos','Empresa Registrada Correctamente');
 
        // return dd($request);
@@ -109,10 +115,13 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        $Empresa = Empresa::findOrFail($id);
-        $Empresa->delete();
+        
+       $Empresa = Empresa::findOrFail($id);
+       $user = User::findOrFail($request->id_user);
+       $user->empresas()->detach($id);
+       $Empresa->delete();
         return redirect()->route('empresa.index')->with('datos','Empresa Eliminada Correctamente');
         
     }

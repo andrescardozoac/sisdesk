@@ -12,6 +12,8 @@
 @method('DELETE')
 @csrf
 
+<input type="hidden" name="id_user" value="{{ Auth::user()->id }}"/>
+
 <button type="submit" class="redondo btn btn-danger">
 <i class="fas fa-trash-alt"></i>Eliminar
 </button>
