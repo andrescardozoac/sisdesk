@@ -1,6 +1,7 @@
 <nav class="navbar navbar-light">
   <a href ="{{route('empresa.index')}}"class="navbar-brand"><img id="icono" class="img-responsive" 
     src="{{ asset('images/logo.png') }}" style="width: 150px;"></a>
+    {{ asset('images/logo.png') }}
   <ul class="nav flex-column text-center">
   <li class="nav-item">
     <span class="nav-link active">Bienvenido   {{ Auth::user()->name }} </span>
