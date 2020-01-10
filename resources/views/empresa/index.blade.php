@@ -97,7 +97,7 @@
                                                   <td>{{$Empresaitem->telefono}}</td>
                                                   <td>{{$Empresaitem->descripcion}}</td>
                                                   <td>{{$Empresaitem->tipoEmpresa}}</td>
-                                                  <td> <a href="{{route('empresa.show',$Empresaitem->id)}}">
+                                                  <td> <a href="{{route('empresa.download',$Empresaitem->id)}}">
                                                   Descargar Aplicativo</td>
                                                   <td><a  href="{{route('empresa.edit',$Empresaitem->id)}}" class="btn btn-success btncolorblanco">
                                                         <i class="fa fa-edit"></i> Editar 

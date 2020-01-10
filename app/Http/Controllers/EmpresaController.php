@@ -131,4 +131,10 @@ class EmpresaController extends Controller
         $Empresa = Empresa::findOrFail($id);
         return view('empresa.confirm',compact('Empresa'));
     }
+
+    public function download($id)
+    {
+        $Empresa = Empresa::findOrFail($id);
+        return view('empresa.download',compact('Empresa'));
+    }
 }
