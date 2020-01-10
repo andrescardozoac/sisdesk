@@ -32,7 +32,7 @@
 
                 <div class="row">
                     <div class="col-md-3 register-left">
-                        <img src="http://www.idaipqroo.org.mx/wp-content/uploads/2018/06/proteccion-de-datos-personales-791x1024.png" alt=""/>
+                        <img src="{{ asset('images/imagen1.png') }}" alt=""/>
                         <h3>Bienvenid@</h3>
                         <p>Por favor llena los datos correctamente en el sistema!</p>
                         

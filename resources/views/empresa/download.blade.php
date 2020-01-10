@@ -24,7 +24,7 @@
 
                 <div class="row">
                     <div class="col-md-3 register-left">
-                        <img src="http://www.idaipqroo.org.mx/wp-content/uploads/2018/06/proteccion-de-datos-personales-791x1024.png"/>
+                        <img src="{{ asset('images/imagen1.png') }}"/>
                         <h3>Bienvenid@</h3>
                         <p>Por favor seleccione el Sistema Operativo y Descarge el Aplicativo!</p>
                         

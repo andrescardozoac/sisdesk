@@ -8,7 +8,7 @@
 <div class="container-fluid registerinicio">
                 <div class="row">
                     <div class="col-md-6 register-left register-left1">
-                    <img src="http://www.idaipqroo.org.mx/wp-content/uploads/2018/06/proteccion-de-datos-personales-791x1024.png" alt=""/>
+                    <img src="{{ asset('images/imagen1.png') }}" alt=""/>
                     </div>    
                     <div class="col-md-6 register-left">
                         
