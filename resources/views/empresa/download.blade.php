@@ -42,10 +42,10 @@
 
                                     <div class="form-group">
                                             
-                                                <img src="http://127.0.0.1/sisdesk/resources/images/win.png"  style="width:20%;" />
+                                                <img src="{{ asset('images/win.png') }}"  style="width:20%;" />
                                                 Windows
                                                 <a href="#" download="sisdesk.exe">
-                                                <img src="http://127.0.0.1/sisdesk/resources/images/btn.png" style="width:40%;"/>
+                                                <img src="{{ asset('images/btn.png') }}" style="width:40%;"/>
                                                 </a>
                                     </div>
                                     
@@ -53,19 +53,19 @@
                                         <div class="form-group">
                                            
                                                 
-                                                <img src="http://127.0.0.1/sisdesk/resources/images/mac.png" style="width:20%;" />
+                                                <img src="{{ asset('images/mac.png') }}" style="width:20%;" />
                                                 Mac OSX
                                                 <a href="#" download="sisdesk.pkg">
-                                                <img src="http://127.0.0.1/sisdesk/resources/images/btn.png" style="width:40%;"/>
+                                                <img src="{{ asset('images/btn.png') }}" style="width:40%;"/>
                                                 <a/>
                                         </div>
 
                                         <div class="form-group">
                                            
-                                                <img src="http://127.0.0.1/sisdesk/resources/images/lin.png" style="width:25%;"/>
+                                                <img src="{{ asset('images/lin.png') }}" style="width:25%;"/>
                                                 Linux
                                                 <a href="#" download="sisdesk.deb">
-                                                <img src="http://127.0.0.1/sisdesk/resources/images/btn.png" style="width:40%;"/>
+                                                <img src="{{ asset('images/btn.png') }}" style="width:40%;"/>
                                                 </a>
                                         </div>
 
