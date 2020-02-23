@@ -124,7 +124,7 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text"><i class="fa fa-phone text-info"></i></div>
                                                 </div>
-                                            <input class="form-control" type="number" name="telefono" placeholder="Telefono: 18491115555" id="telefono" maxlength="50" required> 
+                                            <input class="form-control" type="text" name="telefono" placeholder="Telefono: 18491115555" id="telefono" maxlength="20" required> 
                                             </div>
                                         </div>
                                         
