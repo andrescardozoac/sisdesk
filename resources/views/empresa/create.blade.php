@@ -55,9 +55,10 @@
                                                 </div>
                                              <select name ="tipoIdentificacion" class="form-control" required>
                                                 <option class="hidden" selected disabled value="">Tipo Identificación</option>
-                                                <option value = "1">NIT</option>
-                                                <option value = "2">CC</option>
-                                                <option value = "3">Otro</option>
+                                                <option value = "NI">NIT</option>
+                                                <option value = "MU">MUNICIPIO</option>
+                                                <option value = "DE">DEPARTAMENTO</option>
+                                                <option value = "DI">DISTRITO</option>
                                             </select>
                                             </div>
                                     </div>
