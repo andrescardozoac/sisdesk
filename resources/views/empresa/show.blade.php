@@ -50,22 +50,24 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text"><i class="fa fa-map-marker-alt text-info"></i></div>
                                                 </div>
-                                            @php($tipoID=['NIT','CC','Otro'])
+                                            @php($tipoIDDesc=['NIT','MUNICIPIO','DEPARTAMENTO','DISTRITO'])
+                                            @php($tipoIDVal=['NI','MU','DE','DI'])
                                             @php($cont=0)
 
                                              <select name ="tipoIdentificacion" class="form-control" required disabled="true">
                                                 <option class="hidden" disabled>Tipo Identificación</option>
                                                 
-                                                @foreach($tipoID as $tipo)
-                                                @php($cont++)
-                                                <option value = "<?php echo $cont;?>"
+                                                @foreach($tipoIDVal as $tipo)
+                                               
+                                                <option value = "<?php echo $tipo;?>"
 
-                                                    @if ($Empresa->tipoid == $cont)
+                                                    @if ($Empresa->tipoid == $tipo)
                                                         selected
                                                     @endif
-                                                >{{$tipo}}
+                                                    
+                                                >{{$tipoIDDesc[$cont]}}
                                                 </option>
-                                               
+                                                @php($cont++)
                                                 @endforeach  
                                             </select>
                                             </div>
@@ -86,13 +88,39 @@
                                         <div class="form-group">
                                            <div class="input-group">
                                                 <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-building  text-info"></i></div>
+                                                </div>
+                                                @php($tipoEmp=['IPS','OTRA'])
+                                             <select name ="tipoEmpresa" class="form-control" required disabled="true">
+                                                <option class="hidden" selected disabled value="">Tipo Empresa</option>
+                                                @foreach($tipoEmp as $tipoE)
+                                               
+                                                <option value = "<?php echo $tipoE;?>"
+
+                                                    @if ($Empresa->tipoEmpresa == $tipoE)
+                                                        selected
+                                                    @endif
+                                                    
+                                                >{{$tipoE}}
+                                                </option>
+                                                @endforeach  
+                                            </select>
+                                            </div>
+                                    </div>
+
+                                
+
+                                        <div id ="divHabilitacion" class="form-group" style="display:none">
+                                           <div class="input-group">
+                                                <div class="input-group-prepend">
                                                     <div class="input-group-text"><i class="fa fa-user-edit text-info"></i></div>
                                                 </div>
-                                            <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" value="{{$Empresa->descripcion}}" disabled="true"> 
+                                            <input type="number" class="form-control" id="codigohabilitacion" name="codigohabilitacion" placeholder="Codigo Habilitacion" required="" value="{{$Empresa->codHabilitacion}}" disabled="true"/>
                                             </div>
                                         </div>
 
-                                        @if($Empresa->tipoEmpresa == 'Empresa')
+                                        
+                                        @if($Empresa->rol == '1')
                                             @php($empresa = 'checked')
                                             @php($particular = '')
                                         @else
@@ -103,12 +131,12 @@
                                         <div class="form-group">
                                             <div class="maxl">
                                                 <label class="radio inline"> 
-                                                    <input type="radio" name="tipoEmpresa" value="Empresa" {{$empresa}} disabled="true">
-                                                    <span> Empresa </span> 
+                                                    <input type="radio" name="rol" value="1" {{$empresa}} disabled="true">
+                                                    <span> Fabricante/Importador </span> 
                                                 </label>
                                                 <label class="radio inline"> 
-                                                    <input type="radio" name="tipoEmpresa" value="Particular" {{$particular}} disabled="true">
-                                                    <span>Particular </span> 
+                                                    <input type="radio" name="rol" value="2" {{$particular}} disabled="true">
+                                                    <span> No Aplica </span> 
                                                 </label>
                                             </div>
                                         </div>
@@ -157,5 +185,6 @@
             </div>
 
 </form>
+
 <!--@include('plantilla.footer',['container'=>'container'])-->
 @endsection

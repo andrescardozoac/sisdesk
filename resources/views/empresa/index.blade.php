@@ -70,7 +70,6 @@
                                                   <th scope="col">Empresa</th>
                                                   <th scope="col">Correo</th>
                                                   <th scope="col">Telefono</th>
-                                                  <th scope="col">Descripción</th>
                                                   <th scope="col">Tipo Empresa</th>
                                                   <th scope="col">Enlace de Descarga</th>
                                                   <th scope="col">Acción</th>
@@ -95,7 +94,7 @@
                                                  </td>
                                                   <td>{{$Empresaitem->correo}}</td>
                                                   <td>{{$Empresaitem->telefono}}</td>
-                                                  <td>{{$Empresaitem->descripcion}}</td>
+        
                                                   <td>{{$Empresaitem->tipoEmpresa}}</td>
                                                   <td> <a href="{{route('empresa.download',$Empresaitem->id)}}">
                                                   Descargar Aplicativo</td>

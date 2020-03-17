@@ -48,10 +48,14 @@ class EmpresaController extends Controller
         $Empresa->tipoid= $request->tipoIdentificacion;
         $Empresa->identificacion = $request->identificacion;
         $Empresa->nombre = $request->nombreEmpresa;
-        $Empresa->descripcion = $request->descripcion;
+        $Empresa->rol = $request->rol;
         $Empresa->correo = $request->email;
         $Empresa->telefono = $request->telefono;
         $Empresa->tipoEmpresa =$request->tipoEmpresa;
+        if($request->tipoEmpresa == "IPS")
+        $Empresa->codHabilitacion =$request->codigohabilitacion;
+        else
+        $Empresa->codHabilitacion =0;
         $Empresa->save();
 
        
@@ -100,10 +104,14 @@ class EmpresaController extends Controller
         $Empresa->tipoid= $request->tipoIdentificacion;
         $Empresa->identificacion = $request->identificacion;
         $Empresa->nombre = $request->nombreEmpresa;
-        $Empresa->descripcion = $request->descripcion;
+        $Empresa->rol = $request->rol;
         $Empresa->correo = $request->email;
         $Empresa->telefono = $request->telefono;
         $Empresa->tipoEmpresa =$request->tipoEmpresa;
+        if($request->tipoEmpresa == "IPS")
+        $Empresa->codHabilitacion =$request->codigohabilitacion;
+        else
+        $Empresa->codHabilitacion = 0;
         $Empresa->save();
        return redirect()->route('empresa.index')->with('datos','Empresa Actualizado Correctamente');
         

@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('recaptcha')
+{!! htmlScriptTagJsApi(['action' => 'homepage']) !!}
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

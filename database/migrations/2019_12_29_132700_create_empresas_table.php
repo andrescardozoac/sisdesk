@@ -18,9 +18,10 @@ class CreateEmpresasTable extends Migration
             $table->string('tipoid',3);
             $table->string('identificacion',20);
             $table->string('nombre',50);
-            $table->string('descripcion',50)->nullable();
+            $table->string('codHabilitacion',10)->nullable();
             $table->string('correo',50);
             $table->string('telefono',50);
+            $table->string('rol',2);
             $table->string('tipoEmpresa',10);
             $table->timestamps();
         });

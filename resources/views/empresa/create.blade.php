@@ -1,9 +1,12 @@
+@section('recaptcha')
+{!! htmlScriptTagJsApi(['action' => 'homepage']) !!}
+@endsection
+
 @extends('plantilla.plantilla')
 
 @section('titulo','Crear Empresa')
 
 @section('contenido')
-
   
 <div class="container">
      <br>
@@ -51,7 +54,7 @@
                                     <div class="form-group">
                                            <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <div class="input-group-text"><i class="fa fa-map-marker-alt text-info"></i></div>
+                                                    <div class="input-group-text"><i class="fa fa-cog text-info"></i></div>
                                                 </div>
                                              <select name ="tipoIdentificacion" class="form-control" required>
                                                 <option class="hidden" selected disabled value="">Tipo Identificación</option>
@@ -63,8 +66,6 @@
                                             </div>
                                     </div>
                                 
-                                        
-                                    
 
                                         <div class="form-group">
                                            <div class="input-group">
@@ -78,23 +79,37 @@
                                         <div class="form-group">
                                            <div class="input-group">
                                                 <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="fa fa-building  text-info"></i></div>
+                                                </div>
+                                             <select name ="tipoEmpresa" class="form-control"  onChange="tipoOnChange(this)"required>
+                                                <option class="hidden" selected disabled value="">Tipo Empresa</option>
+                                                <option value = "IPS">IPS</option>
+                                                <option value = "OTRA">OTRA</option>
+                                            </select>
+                                            </div>
+                                    </div>
+
+                                    
+                                     
+                                        <div id ="divHabilitacion" class="form-group" style="display:none">
+                                           <div class="input-group">
+                                                <div class="input-group-prepend">
                                                     <div class="input-group-text"><i class="fa fa-user-edit text-info"></i></div>
                                                 </div>
-                                            <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" maxlength="50">
+                                            <input type="number" class="form-control" id="codigohabilitacion" name="codigohabilitacion" placeholder="Codigo Habilitacion" max="9999999999"/>
                                             </div>
                                         </div>
 
-                                        
-                                     
+
                                         <div class="form-group">
                                             <div class="maxl">
                                                 <label class="radio inline"> 
-                                                    <input type="radio" name="tipoEmpresa" value="Empresa" checked>
-                                                    <span> Empresa </span> 
+                                                    <input type="radio" name="rol" value="1">
+                                                    <span> Fabricante/Importador </span> 
                                                 </label>
                                                 <label class="radio inline"> 
-                                                    <input type="radio" name="tipoEmpresa" value="Particular">
-                                                    <span>Particular </span> 
+                                                    <input type="radio" name="rol" value="2" checked>
+                                                    <span> No Aplica </span> 
                                                 </label>
                                             </div>
                                         </div>
@@ -106,7 +121,7 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text"><i class="fa fa-address-card text-info"></i></div>
                                                 </div>
-                                             <input type="text" name="identificacion" class="form-control" placeholder="Identificación" value="" maxlength="20" required=""/>
+                                             <input type="number" name="identificacion" class="form-control" placeholder="Identificación" value="" max="999999999999" required=""/>
                                             </div>
                                         </div>
 
@@ -124,9 +139,11 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text"><i class="fa fa-phone text-info"></i></div>
                                                 </div>
-                                            <input class="form-control" type="text" name="telefono" placeholder="Telefono: 18491115555" id="telefono" maxlength="20" required> 
+                                            <input class="form-control" type="text" name="telefono" placeholder="Telefono: 3208199860" id="telefono" maxlength="20" required> 
                                             </div>
                                         </div>
+
+                                        
                                         
                                     <button type="submit" class="redondo btn btn-info"><i class="fas fa-save"></i> Guardar</button>
                                     <a href="{{route('cancelar')}}" class="redondo btn btn-danger"><i class="fas fa-ban"></i> Cancelar</a>
@@ -141,5 +158,25 @@
             </div>
 
 </form>
-<!--@include('plantilla.footer',['container'=>'container'])-->
+
+<script>
+
+function tipoOnChange(sel) {
+      if (sel.value=="IPS"){
+           divC = document.getElementById("divHabilitacion");
+           divC.style.display = "";
+           divID = document.getElementById("codigohabilitacion");
+           divID.required = true;
+      }else{
+
+           divC = document.getElementById("divHabilitacion");
+           divC.style.display="none";
+           divID = document.getElementById("codigohabilitacion");
+           divID.required = false;
+          
+      }
+}
+
+
+</script>
 @endsection
