@@ -1,6 +1,6 @@
 @extends('plantilla.plantilla')
 
-@section('titulo','Mostrar Empresa')
+@section('titulo','SISDESK')
 
 @section('contenido')
 

@@ -1,6 +1,6 @@
 @extends('plantilla.plantilla')
 
-@section('titulo','Mostrar Empresa')
+@section('titulo','SISDESK')
 
 @section('contenido')
 
@@ -11,7 +11,7 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="{{route('empresa.index')}}">Inicio</a></li>
+ <li class="breadcrumb-item"><a href="{{route('empresa.index')}}">Inicio</a></li>
     <li class="breadcrumb-item"><a>Descargar Aplicativo</a></li>
    <!-- <li class="breadcrumb-item active" aria-current="page">{{$Empresa->nombre}}</li>-->
   </ol>

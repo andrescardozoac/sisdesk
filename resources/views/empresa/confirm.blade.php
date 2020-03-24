@@ -1,6 +1,6 @@
 @extends('plantilla.plantilla')
 
-@section('titulo','Confirmar Eliminacion del Registro')
+@section('titulo','SISDESK')
 
 
 @section('contenido')

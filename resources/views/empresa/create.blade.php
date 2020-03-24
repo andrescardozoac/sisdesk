@@ -4,7 +4,7 @@
 
 @extends('plantilla.plantilla')
 
-@section('titulo','Crear Empresa')
+@section('titulo','SISDESK')
 
 @section('contenido')
   

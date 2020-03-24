@@ -22,7 +22,13 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('verified'
 
 Route::resource('empresa','EmpresaController')->middleware('verified');
 
+Route::get('/canceled', function () {
+    return view('canceled');
+});
 
+Route::get('/success', function () {
+    return view('success');
+});
 
 Route::get('/cancelar',function(){
 
@@ -30,6 +36,9 @@ Route::get('/cancelar',function(){
 
 })->name('cancelar');
 
-Route::get('/empresa/{id}/confirm','EmpresaController@confirm')->name('empresa.confirm');
 
-Route::get('/empresa/{id}/download','EmpresaController@download')->name('empresa.download');
+Route::get('/empresa/{id}/confirm','EmpresaController@confirm')->name('empresa.confirm')->middleware('verified');
+
+Route::get('/empresa/download/{i}','EmpresaController@download')->name('empresa.download');
+
+Route::get('/empresa/pay/$','EmpresaController@comprar')->name('empresa.comprar');

@@ -1,6 +1,6 @@
 @extends('plantilla.plantilla')
 
-@section('titulo','Empresa')
+@section('titulo','SISDESK')
 
 
 @section('contenido')
@@ -59,6 +59,7 @@
       <br>
 <div class="row float-right">
     <a href="{{route('empresa.create')}}"  class="btn btn-info btncolorblanco"><i class="fas fa-user-plus"></i> Agregar Empresa</a>
+    <a href="{{route('empresa.comprar')}}"  class="btn btn-info btncolorblanco"><i class="fas fa-money-check-alt"></i> Comprar </a>
 </div>
    <br>
 
