@@ -49,7 +49,7 @@
       // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
       var PUBLISHABLE_KEY = "pk_test_Dd2M9t67UOwlEYOMQdSDXQJA00wbHlOOxB";
       // Replace with the domain you want your users to be redirected back to after payment
-      var DOMAIN = "http://sisdesk.com/success";
+      var DOMAIN = "http://sisdesk.com";
       // Replace with a SKU for your own product (created either in the Stripe Dashboard or with the API)
       var SKU_ID = "sku_GwHxgZseBZmsPa";
 
