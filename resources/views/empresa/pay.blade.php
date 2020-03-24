@@ -135,7 +135,7 @@
             items: [{ sku: SKU_ID, quantity: quantity }],
             successUrl:
               DOMAIN + "/success?session_id={CHECKOUT_SESSION_ID}",
-            cancelUrl: DOMAIN + "/canceled"
+            cancelUrl: DOMAIN + "/canceled?session_id={CHECKOUT_SESSION_ID}"
           })
           .then(handleResult);
       });

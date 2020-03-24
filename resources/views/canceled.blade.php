@@ -24,18 +24,16 @@
         </header>
         <div class="sr-payment-summary completed-view">
           <h1>Su pago fue cancelado</h1>
-          <h4>Checkout Session ID: <span id="session"></span></h4>
+      <!--   <h4>Checkout Session ID: <span id="session"></span></h4>-->
         </div>
       <div class="sr-content">
-        <div class="pasha-image-stack">
-        <div class="pasha-image">
+        <div class="objcenter">
               <img
                 src="{{ asset('images/cancel.png') }}"
                 width="140"
                 height="160"
               />
-            </div>
-        </div>
+              </div>
       </div>
     </div>
     <script>

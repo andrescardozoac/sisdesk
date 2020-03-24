@@ -26,13 +26,13 @@
         </div>
       <div class="sr-content">
      
-        <div class="pasha-image">
+        <div class="objcenter"> 
               <img
-                src="{{ asset('images/ok.png') }}"
+                src="{{ asset('images/payok.png') }}"
                 width="140"
                 height="160"
               />
-            </div>
+              </div>
             
             Pago Recibido, ¡Gracias! Hemos recibido satisfactoriamente tu pago, te enviaremos un recibo digital a tu correo, Gracias por confiar en nosotros.
       </div>
