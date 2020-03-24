@@ -134,8 +134,8 @@
           .redirectToCheckout({
             items: [{ sku: SKU_ID, quantity: quantity }],
             successUrl:
-              DOMAIN + "/success.html?session_id={CHECKOUT_SESSION_ID}",
-            cancelUrl: DOMAIN + "/canceled.html"
+              DOMAIN + "/success?session_id={CHECKOUT_SESSION_ID}",
+            cancelUrl: DOMAIN + "/canceled"
           })
           .then(handleResult);
       });
