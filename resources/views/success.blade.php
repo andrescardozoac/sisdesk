@@ -51,7 +51,7 @@
       var urlParams = new URLSearchParams(window.location.search);
 
       if (urlParams.has("session_id")) {
-        console.log("session_id");
+        console.log(urlParams.get("session_id");
         console.log(stripe);
         console.log(urlParams);
         document.getElementById("session").textContent = urlParams.get(
