@@ -52,7 +52,8 @@
 
       console.log(stripe);
       console.log(urlParams);
-      var variable;
+      var variable1;
+      var variable2;
       
       if (urlParams.has("session_id")) {
        
@@ -60,9 +61,11 @@
           "session_id"
         );
 
-        variable = urlParams.get("session_id");
+        variable1 = urlParams.get("session_quantity");
+        variable2 = urlParams.get("session_price")
 
       }
 
-      console.log(variable);
+      console.log(variable1);
+      console.log(variable2);
     </script>
