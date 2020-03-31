@@ -49,8 +49,8 @@
 
       var stripe = Stripe(PUBLISHABLE_KEY);
       var urlParams = new URLSearchParams(window.location.search);
+      var prueba1;
 
-      console.log(urlParams.has("session_id"));
       
       if (urlParams.has("session_id")) {
        
@@ -58,7 +58,10 @@
           "session_id"
         );
 
+      prueba1 = urlParams.get("display_items");
 
       }
+
+      console.log(prueba1);
 
     </script>
