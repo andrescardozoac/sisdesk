@@ -50,12 +50,19 @@
       var stripe = Stripe(PUBLISHABLE_KEY);
       var urlParams = new URLSearchParams(window.location.search);
 
+      console.log(stripe);
+      console.log(urlParams);
+      var variable;
+      
       if (urlParams.has("session_id")) {
-        console.log(urlParams.get("session_id");
-        console.log(stripe);
-        console.log(urlParams);
+       
         document.getElementById("session").textContent = urlParams.get(
           "session_id"
         );
+
+        variable = urlParams.get("session_id");
+
       }
+
+      console.log(variable);
     </script>
