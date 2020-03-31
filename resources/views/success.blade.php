@@ -23,7 +23,6 @@
         <div class="sr-payment-summary completed-view">
           <h1>Su pago fue procesado Exisotasamente!</h1>
           <h4>Checkout Session ID: <span id="session"></span></h4>
-          dd("session");
         </div>
       <div class="sr-content">
      
@@ -52,6 +51,9 @@
       var urlParams = new URLSearchParams(window.location.search);
 
       if (urlParams.has("session_id")) {
+        console.log("session_id");
+        console.log(stripe);
+        console.log(urlParams);
         document.getElementById("session").textContent = urlParams.get(
           "session_id"
         );
