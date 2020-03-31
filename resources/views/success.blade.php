@@ -58,7 +58,7 @@
           "session_id"
         );
 
-      prueba1 = urlParams.get("display_items");
+      prueba1 = urlParams.get("session_display_items");
 
       }
 
