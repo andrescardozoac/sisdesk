@@ -23,6 +23,7 @@
         <div class="sr-payment-summary completed-view">
           <h1>Su pago fue procesado Exisotasamente!</h1>
           <h4>Checkout Session ID: <span id="session"></span></h4>
+          dd("session");
         </div>
       <div class="sr-content">
      
@@ -34,7 +35,7 @@
               />
               </div>
             
-            Pago Recibido, ¡Gracias! Hemos recibido satisfactoriamente tu pago, te enviaremos un recibo digital a tu correo, Gracias por confiar en nosotros.
+            ¡Gracias! Hemos recibido satisfactoriamente tu pago, te enviaremos un recibo digital a tu correo, Gracias por confiar en nosotros.
       </div>
     </div>
     <script>
